@@ -1,7 +1,7 @@
 {
     "apps": [
         {
-            "name": "typescript-starter",
+            "name": "cloudcnp-server",
             "script": "dist/app.js",
             "watch": false,
             "env": {

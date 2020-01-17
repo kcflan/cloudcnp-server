@@ -1,2 +1,3 @@
 // src/constants.ts
-export const CARD_CREATED = 'CARD_CREATED'
+export const PASTE_CREATED = 'PASTE_CREATED'
+export const USER_CREATED = 'USER_CREATED'
