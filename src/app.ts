@@ -3,6 +3,7 @@ import { ApolloServer, PubSub } from 'apollo-server'
 import typeDefs from './schema'
 import connect from './database/connect'
 import resolvers from './resolvers'
+const dotenv = require('dotenv').config()
 
 // const Query = require('./resolvers/query')
 // const Mutation = require('./resolvers/mutation')
@@ -25,8 +26,7 @@ const server = new ApolloServer({
     // context: ({ req, res }) => ({ req, res }),
 })
 
-// Move this into a configuration file
-const DATABASE_NAME = 'test-database'
+const DATABASE_NAME = process.env.DATABASE_NAME
 
 // The `listen` method launches a web server.
 server.listen().then(async ({ url }: { url: string }) => {
