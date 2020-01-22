@@ -24,6 +24,8 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
     // context: ({ req, res }) => ({ req, res }),
+    introspection: true,
+    playground: true,
 })
 
 const DATABASE_NAME = process.env.DATABASE_NAME
