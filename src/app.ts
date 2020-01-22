@@ -28,10 +28,11 @@ const server = new ApolloServer({
 
 const DATABASE_NAME = process.env.DATABASE_NAME
 const uri = `mongodb://localhost:27017/${DATABASE_NAME}`
+const PORT = process.env.PORT || 5000
 
 // The `listen` method launches a web server.
-server.listen(process.env.PORT).then(async ({ url }: { url: string }) => {
-    console.log(`🚀  Server ready at ${url}`)
+server.listen(PORT).then(async ({ url }: { url: string }) => {
+    console.log(`🚀  Server ready at ${url}${server.graphqlPath}`)
     // Connect to your database
     await connect({ db: `${process.env.MONGODB_URI}` })
     // await connect({ db: `mongodb://localhost:27017/${DATABASE_NAME}` })
