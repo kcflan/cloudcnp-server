@@ -27,10 +27,12 @@ const server = new ApolloServer({
 })
 
 const DATABASE_NAME = process.env.DATABASE_NAME
+const uri = `mongodb://localhost:27017/${DATABASE_NAME}`
 
 // The `listen` method launches a web server.
 server.listen().then(async ({ url }: { url: string }) => {
     console.log(`🚀  Server ready at ${url}`)
     // Connect to your database
-    await connect({ db: `mongodb://localhost:27017/${DATABASE_NAME}` })
+    await connect({ db: `process.env.MONGODB_URI` })
+    // await connect({ db: `mongodb://localhost:27017/${DATABASE_NAME}` })
 })
