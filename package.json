@@ -10,7 +10,7 @@
         "test": "jest",
         "build": "tsc",
         "dev": "nodemon",
-        "start": "node app.ts"
+        "start": "ts-node ./src/app.ts"
     },
     "devDependencies": {
         "@types/jest": "^24.0.11",
