@@ -2,7 +2,7 @@
 import PasteModel, { Paste } from '../models/paste.model'
 import { PASTE_CREATED } from '../constants'
 import { pubsub } from '../app'
-
+import path from 'path'
 export interface CreatePasteInput {
     url: string
     pastedBy: string
