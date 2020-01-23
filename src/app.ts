@@ -30,7 +30,7 @@ const server = new ApolloServer({
 
 const DATABASE_NAME = process.env.DATABASE_NAME
 const uri = `mongodb://localhost:27017/${DATABASE_NAME}`
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 4000
 
 // The `listen` method launches a web server.
 server.listen(PORT).then(async ({ url }: { url: string }) => {
